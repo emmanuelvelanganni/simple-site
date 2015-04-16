@@ -1,0 +1,33 @@
+$yellow: rgb(250,211,0); /*#fad300*/ 
+$darkgray: rgb(55,51,48); /*#373330*/
+$lightgray: rgb(198,197,199); /*#c6c5c7*/
+$darkred: rgb(171,9,12);/*#ab090c*/
+$lightred: rgb(203,30,12);/*#cb1e0c*/
+$darkblue: rgb(0,52,121);/*#003479*/
+$toolbarbg:#181a26;
+$default-text-shadow-color: rgba(red, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+html body #main nav ul li a, html body .main nav ul li a {
+	color:white;
+	background:$darkred; 
+}
+html body #main nav ul li a:hover, html body .main nav ul li a:hover{
+	background:$lightred;    
+} 
+html body #main nav ul li a:focus,  html body .main nav ul li a:focus {
+	color:$darkgray;
+	background:#ffffff;    
+} 
+html body #main article section, html body .main article section {
+	width:1085px;
+}
+html body #main aside section, html body .main aside section {
+	width:370px;
+}
+html body #main footer, html body .main footer {
+	background-image:none;
+	background-color:$darkgray;
+	position:relative;
+	bottom:0px;
+}
