@@ -1,0 +1,27 @@
+{
+  "name": "simple-site",
+  "version": "1.0.0",
+  "description": "xsysys simple website",
+  "main": "index.html",
+  "keywords": [
+    "xsysys",
+    "website"
+  ],
+  "authors": [
+    "Emmanuel V"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.3"
+  }
+}
