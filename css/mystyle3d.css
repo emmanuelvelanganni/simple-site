@@ -1,0 +1,313 @@
+/*#fad300*/
+/*#373330*/
+/*#c6c5c7*/
+/*#ab090c*/
+/*#cb1e0c*/
+/*#003479*/
+/* line 12, ../sass/mystyle3d.scss */
+.clearboth {
+  clear: both;
+  width: 0px;
+  height: 0px;
+  line-height: 0px;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+  content: '';
+}
+
+/* line 23, ../sass/mystyle3d.scss */
+.xsysys_style {
+  font-family: century gothic;
+}
+
+/* line 26, ../sass/mystyle3d.scss */
+html {
+  box-sizing: border-box;
+  background-color: #333333;
+  border: 0 none;
+  color: #373330;
+  display: block;
+  font-size: 62.5%;
+  font-family: arial;
+  height: auto;
+  outline: 0 none;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
+  vertical-align: baseline;
+  width: 100%;
+}
+/* line 41, ../sass/mystyle3d.scss */
+html body {
+  box-sizing: border-box;
+  background-color: white;
+  overflow-y: auto;
+  margin: 0px;
+  height: inherit;
+  width: inherit;
+}
+/* line 48, ../sass/mystyle3d.scss */
+html body #main, html body .main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  font-size: 12px;
+  position: relative;
+}
+/* line 56, ../sass/mystyle3d.scss */
+html body #main header, html body .main header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 63, ../sass/mystyle3d.scss */
+html body #main header h1, html body .main header h1 {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 72, ../sass/mystyle3d.scss */
+html body #main nav, html body .main nav {
+  box-sizing: border-box;
+  background: #fad300;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZDMwMCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjYWIwOTBjIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzczMzMwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-linear-gradient(270deg, #fad300, #ab090c, #373330);
+  background-image: linear-gradient(180deg, #fad300, #ab090c, #373330);
+  /*@include background-image(linear-gradient(180deg, rgb(250,211,0), rgb(55,51,48), rgb(198,197,199)));*/
+  /*background: -webkit-linear-gradient(180deg, #ab090c, #ce3368); 
+  background: -o-linear-gradient(180deg, #ab090c, #ce3368); 
+  background: -moz-linear-gradient(180deg, #ab090c, #ce3368);
+  background: linear-gradient(180deg, #ab090c, #ce3368); */
+  border-bottom: 2px solid #373330;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+}
+/* line 86, ../sass/mystyle3d.scss */
+html body #main nav .block-menu, html body .main nav .block-menu {
+  box-sizing: border-box;
+  display: block;
+  background: #000;
+  margin: 0px;
+}
+/* line 91, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li, html body .main nav .block-menu li {
+  box-sizing: border-box;
+  display: inline-block;
+}
+/* line 94, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li a, html body .main nav .block-menu li a {
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-family: 'Passion One', Arial, sans-serif;
+  font-smoothing: antialiased;
+  text-transform: uppercase;
+  overflow: visible;
+  line-height: 20px;
+  font-size: 24px;
+  padding: 5px 10px;
+}
+/* line 107, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li .three-d, html body .main nav .block-menu li .three-d {
+  box-sizing: border-box;
+  -webkit-perspective: 200px;
+          perspective: 200px;
+  -webkit-transition: all .07s linear;
+          transition: all .07s linear;
+  position: relative;
+  cursor: pointer;
+}
+/* line 113, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li .three-d .three-d-box, html body .main nav .block-menu li .three-d .three-d-box {
+  box-sizing: border-box;
+  -webkit-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+  -webkit-transform: translatez(-15px);
+      -ms-transform: translatez(-15px);
+          transform: translatez(-15px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 125, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li .three-d .three-d-box .front, html body .main nav .block-menu li .three-d .three-d-box .front {
+  box-sizing: border-box;
+  -webkit-transform: rotatex(0deg) translatez(15px);
+      -ms-transform: rotatex(0deg) translatez(15px);
+          transform: rotatex(0deg) translatez(15px);
+}
+/* line 129, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li .three-d .three-d-box .back, html body .main nav .block-menu li .three-d .three-d-box .back {
+  box-sizing: border-box;
+  -webkit-transform: rotatex(-90deg) translatez(15px);
+      -ms-transform: rotatex(-90deg) translatez(15px);
+          transform: rotatex(-90deg) translatez(15px);
+  color: #ffe7c4;
+}
+/* line 134, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li .three-d .three-d-box .front, html body #main nav .block-menu li .three-d .three-d-box .back, html body .main nav .block-menu li .three-d .three-d-box .front, html body .main nav .block-menu li .three-d .three-d-box .back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  padding: 5px 10px;
+  color: white;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+/* line 149, ../sass/mystyle3d.scss */
+html body #main nav .block-menu li .three-d:hover .three-d-box,
+html body #main nav .block-menu li .three-d:focus .three-d-box, html body .main nav .block-menu li .three-d:hover .three-d-box,
+html body .main nav .block-menu li .three-d:focus .three-d-box {
+  -webkit-transform: translateZ(-25px) rotateX(90deg);
+          transform: translateZ(-25px) rotateX(90deg);
+}
+/* line 157, ../sass/mystyle3d.scss */
+html body #main article, html body #main aside, html body .main article, html body .main aside {
+  box-sizing: border-box;
+  max-height: 680px;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* line 165, ../sass/mystyle3d.scss */
+html body #main article, html body .main article {
+  width: 75%;
+  float: left;
+}
+/* line 168, ../sass/mystyle3d.scss */
+html body #main article section, html body .main article section {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px 30px;
+  text-align: justify;
+  height: 680px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+}
+/* line 179, ../sass/mystyle3d.scss */
+html body #main aside, html body .main aside {
+  width: 25%;
+  margin-left: 75%;
+  border-left: 1px solid black;
+}
+/* line 183, ../sass/mystyle3d.scss */
+html body #main aside section, html body .main aside section {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px 30px;
+  text-align: justify;
+  height: 680px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+}
+/* line 194, ../sass/mystyle3d.scss */
+html body #main footer, html body .main footer {
+  box-sizing: border-box;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzMzMzMyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMzczMzMwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWQxZDFkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-linear-gradient(270deg, #333333, #373330, #1d1d1d);
+  background-image: linear-gradient(180deg, #333333, #373330, #1d1d1d);
+  /*@include background-image(linear-gradient(180deg, #555555, #777777, #1d1d1d));*/
+  /*@include background-image(linear-gradient(#696c72, #333334));*/
+  /*background: -webkit-linear-gradient(180deg, #555555, #1d1d1d);
+  background: -o-linear-gradient(180deg, #555555, #1d1d1d); 
+  background: -moz-linear-gradient(180deg, #555555, #1d1d1d);
+  background: linear-gradient(180deg, #334456, #1d1d1d); */
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  color: white;
+}
+/* line 211, ../sass/mystyle3d.scss */
+html body #main footer .links, html body #main footer .copyrights, html body .main footer .links, html body .main footer .copyrights {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 218, ../sass/mystyle3d.scss */
+html body #main footer .links, html body .main footer .links {
+  width: 70%;
+  float: left;
+}
+/* line 221, ../sass/mystyle3d.scss */
+html body #main footer .links ul, html body .main footer .links ul {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+/* line 227, ../sass/mystyle3d.scss */
+html body #main footer .links ul li, html body .main footer .links ul li {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 232, ../sass/mystyle3d.scss */
+html body #main footer .links ul li a, html body .main footer .links ul li a {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+/* line 243, ../sass/mystyle3d.scss */
+html body #main footer .links ul li a a:hover, html body #main footer .links ul li a a:focus, html body .main footer .links ul li a a:hover, html body .main footer .links ul li a a:focus {
+  color: #ffffff;
+  text-shadow: 0px 0px 1px #ffffff;
+}
+/* line 251, ../sass/mystyle3d.scss */
+html body #main footer .copyrights, html body .main footer .copyrights {
+  width: 30%;
+  margin-left: 70%;
+}
+/* line 254, ../sass/mystyle3d.scss */
+html body #main footer .copyrights span, html body .main footer .copyrights span {
+  color: #ffffff;
+  font-size: 12px;
+}
+/* line 257, ../sass/mystyle3d.scss */
+html body #main footer .copyrights span .xsysys-style, html body .main footer .copyrights span .xsysys-style {
+  font-size: 15px;
+}
