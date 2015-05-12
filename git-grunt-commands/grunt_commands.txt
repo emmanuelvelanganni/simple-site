@@ -1,0 +1,98 @@
+Grunt Command
+
+1. npm init  --> creates package.jason file
+
+2. npm install grunt --save-dev -> this command makes grunt be a dependency to our project and creates a folder called node_modules  for all our local grunt tasks
+
+3. you should create a gruntfile.js with following strcuture and place it inside the project folder. where you are now in command prompt directory
+
+module.exports = function (grunt) {
+    grunt.initConfig ({
+         pkg: grunt.file.readJSON('package.json')
+         
+    });
+    //task setup
+    grunt.registerTask('default', []);
+};
+
+This file will form the basis for telling Grunt what tasks we want to run. If you type grunt in to Terminal/Command Prompt when in this directory now, Grunt will run our default list of tasks. As our default list of tasks is currently empty, although running will be successful it won’t actually do anything. Let’s look at installing a task.
+
+4. install grunt plugins
+
+
+-    Find the plugin you want to use.
+-    Go to your project folder in Terminal/Windows’ Command Prompt and type npm install [task-name] --save-dev
+-    Load the task in Gruntfile.js using grunt.loadNpmTasks (unless you are using a plugin such as grunt-load-tasks)
+-    Configure the task within grunt.initConfig
+-    Run Grunt!
+
+example if you want to add grunt-contrib-jshint plugin type following line in command prompt
+
+npm install grunt-autoprefixer --save-dev or
+
+npm install grunt-contrib-jshint --save-dev
+
+5. Next, open up our Gruntfile.js. We first need to add a command to load the task. Change our Gruntfile.js to include the following line after our grunt.initConfig closing tag:
+
+grunt.loadNpmTasks('grunt-autoprefixer'); or
+
+grunt.loadNpmTasks('grunt-contrib-jshint');
+
+
+
+
+Your Grunt file should now look like this:
+
+module.exports = function(grunt) {
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json')
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    // task setup 
+    grunt.registerTask('default', []);
+};
+
+6. Configuring the task
+
+Next we need to add a jshint section to grunt.initConfig to set our configuration. Within the jshint section we will create a task called dev that looks for all the JavaScript files within our /src/js/ folder and run them through the default JSHint options. 
+
+
+module.exports = function(grunt) {
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+
+        jshint: {
+            dev: {        
+                src: ['/src/js/**/*.js']
+            }
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    // task setup 
+    grunt.registerTask('default', []);
+};
+
+Note the comma after the pkg line
+
+Our src property contains an array of files to match. We could either specify the exact file name, or use wildcards to specify a folder or part of a file name. Using the wildcard * will include any matching filename. Using **/* will include any files in/or outside of folders within the /src/js folder.
+
+7. To see our task in action, go to Terminal or the Windows Command Prompt and type:
+
+grunt jshint 
+
+8. If we want to run JSHint everytime we run Grunt, we can add it to our default custom task:
+
+grunt.registerTask('default', ['jshint']);
+
+Grunt treats a task called default as the default whenever a task is not specified, so we can type grunt to run JSHint and any other tasks we add to the default task array.
+
+
+
+
+
+
+
