@@ -31,7 +31,8 @@
 	</div>
 	<strong class="inspire">inspiring human endeavour</strong>
 </section>
-<a class="back-button" href="javascript:window.location.href='aboutus.php';"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Back</a>
+<!--a class="back-button" href="javascript:window.location.href='aboutus.php';"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Back</a-->
+<a id="back-btn-to-aboutus" class="back-button" onclick="loadAboutUs()"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Back</a>
 <script>
 	/*$(document).ready(function(){
 		$("#newstabs").find("li").on("click", "a", function(){
