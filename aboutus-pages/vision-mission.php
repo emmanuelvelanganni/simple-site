@@ -7,4 +7,5 @@
 		<strong class="inspire">We inspire competition</strong>
 	</div>
 </section>
-<a class="back-button" href="javascript:window.location.href='aboutus.php';"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Back</a>
+<!--a class="back-button" href="javascript:window.location.href='aboutus.php';"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Back</a-->
+<a id="back-btn-to-aboutus" class="back-button" onclick="loadAboutUs()"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Back</a>
