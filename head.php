@@ -143,3 +143,161 @@
 			});
 		});
 	</script>
+	<script>
+			function loadHistory(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/history.php",true);
+					//xmlhttp.setRequestHeader("Content-type","history.html");
+					//window.location.hash="history.html";
+					//window.history.pushState('aboutus', 'Title', './history.html');
+					xmlhttp.send();
+			}
+			
+			function loadVisionMission(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/vision-mission.php",true);
+					xmlhttp.send();
+			}
+			
+			function loadTechnology(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/technology.php",true);
+					xmlhttp.send();
+			}
+			
+			function loadTeam(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/team.php",true);
+					xmlhttp.send();
+			}
+			
+			function loadBrand(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/brand.php",true);
+					xmlhttp.send();
+			}
+			function loadGateway(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/gateway.php",true);
+					xmlhttp.send();
+			}
+			function loadNews(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+							$("#newstabs").find("li").on("click", "a", function(){
+								$(this).closest("li").addClass("xsysys_active");
+								$(this).closest("li").siblings("li").removeClass("xsysys_active");
+							});
+							$("#newstabs").find(".xsysys_active > a").trigger("click");
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/news.php",true);
+					xmlhttp.send();
+			}
+			function loadQualitySystems(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/qsystems.php",true);
+					xmlhttp.send();
+			}
+			function loadAboutUs(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('xsysys-aboutus-content-block').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","aboutus-pages/aboutus-main-content.php",true);
+					xmlhttp.send();
+			}
+	</script>
