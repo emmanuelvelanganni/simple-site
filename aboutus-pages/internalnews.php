@@ -18,10 +18,10 @@
 									<div class="newspaper">
 										<div class="thumbnails">
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_welcome_to_HRH_Prince_Philiippe.jpg','PrinceWelcome',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_welcome_to_HRH_Prince_Philiippe.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_welcome_to_HRH_Prince_Philiippe.jpg','PrinceWelcome',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_welcome_to_HRH_Prince_Philiippe.jpg"/>
 											</a>
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mrs_Fientje_Moerman.jpg','WelcomeMrsFientje',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mrs_Fientje_Moerman.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mrs_Fientje_Moerman.jpg','WelcomeMrsFientje',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mrs_Fientje_Moerman.jpg"/>
 											</a>
 										</div>
 										<p>
@@ -29,10 +29,10 @@
 										</p>
 										<div class="thumbnails">
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mr_Patrick_De_Beyter.jpg','WelcomeMrPatric',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mr_Patrick_De_Beyter.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mr_Patrick_De_Beyter.jpg','WelcomeMrPatric',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_welcome_to_HE_Mr_Patrick_De_Beyter.jpg"/>
 											</a>
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_belgian_roots_in_Indian_soil.jpg','BeligianRootsinIndiansoil',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_belgian_roots_in_Indian_soil.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_belgian_roots_in_Indian_soil.jpg','BeligianRootsinIndiansoil',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_belgian_roots_in_Indian_soil.jpg"/>
 											</a>
 										</div>
 										<p>
@@ -40,34 +40,30 @@
 										</p>
 										<div class="thumbnails">
 											<a href="#">
-												<img style="width:270px; height:400px;" onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_Carl_Dujardin.jpg','CarlDujardin',540,800);return false;" src="images/xsysys-articles/aboutus/news/full_Carl_Dujardin.jpg">
+												<img style="width:270px; height:400px;" onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_Carl_Dujardin.jpg','CarlDujardin',540,800);return false;" src="images/xsysys-articles/aboutus/news/full_Carl_Dujardin.jpg"/>
 											</a>
 											<a href="#">
-												<img style="width:270px; height:400px;" onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_HE_Mrs_Fientje_Moerman.jpg','HEFientjeMoerman',540,800);return false;" src="images/xsysys-articles/aboutus/news/full_HE_Mrs_Fientje_Moerman.jpg">
+												<img style="width:270px; height:400px;" onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_HE_Mrs_Fientje_Moerman.jpg','HEFientjeMoerman',540,800);return false;" src="images/xsysys-articles/aboutus/news/full_HE_Mrs_Fientje_Moerman.jpg"/>
 											</a>
 										</div>
-										<p>
-											HE Mrs. Fientje Moerman. the key-note speaker, was happy to see <span class="xsysys_style">xsysys</span> which has its roots in Flanders, growing and flourishing here in Bangalore. In her speech, the minister also stressed on the fact that <span class="xsysys_style">xsysys</span> has given a positive look to outsourcing by setting up a whole new independent unit in Bangalore to support its parent company back in Belgium. Mrs. Fientje Moerman also mentioned that the Trade Mission would like to strengthen and intensify ties with cities like Bangalore and diversify and expand in other fundamental areas besides gems and jewelries trade. Consequent to this idea, the minister concluded with the note that already a draft of the text of a Declaration of Intent was exchanged with the Chief Minister of Karnataka.
-										</p>
+										<p>HE Mrs. Fientje Moerman. the key-note speaker, was happy to see <span class="xsysys_style">xsysys</span> which has its roots in Flanders, growing and flourishing here in Bangalore. In her speech, the minister also stressed on the fact that <span class="xsysys_style">xsysys</span> has given a positive look to outsourcing by setting up a whole new independent unit in Bangalore to support its parent company back in Belgium. Mrs. Fientje Moerman also mentioned that the Trade Mission would like to strengthen and intensify ties with cities like Bangalore and diversify and expand in other fundamental areas besides gems and jewelries trade. Consequent to this idea, the minister concluded with the note that already a draft of the text of a Declaration of Intent was exchanged with the Chief Minister of Karnataka.</p>
 										<div class="thumbnails">
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_Inauguration_xsysys_technologies.jpg','Inauguration',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_Inauguration_xsysys_technologies.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_Inauguration_xsysys_technologies.jpg','Inauguration',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_Inauguration_xsysys_technologies.jpg"/>
 											</a>
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_company_walkthrough.jpg','CompanyWalkthrough',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_company_walkthrough.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_company_walkthrough.jpg','CompanyWalkthrough',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_company_walkthrough.jpg"/>
 											</a>
 										</div>
 										<p>The event continued with the ribbon cutting by HRH Prince Philippe of Belgium, officially inaugurating the new infrastructure.</p>
-										<p>HRH Prince Philippe of Belgium and his official delegation were interested to know more about the clients and products during the company walk-through. "It was a unique opportunity for us to introduce our highly skilled staff to HRH Prince Philippe of Belgium and his delegation", said Carl Dujardin. </p>
-										<p>
-										Last but not the least, the 45 minute visit of HRH Prince Philippe of Belgium ended with the signing of the Golden Book, making this event yet another milestone in the <span class="xsysys_style">xsysys</span> history.
-										</p>
+										<p>HRH Prince Philippe of Belgium and his official delegation were interested to know more about the clients and products during the company walk-through. "It was a unique opportunity for us to introduce our highly skilled staff to HRH Prince Philippe of Belgium and his delegation", said Carl Dujardin.</p>
+										<p>Last but not the least, the 45 minute visit of HRH Prince Philippe of Belgium ended with the signing of the Golden Book, making this event yet another milestone in the <span class="xsysys_style">xsysys</span> history.</p>
 										<div class="thumbnails">
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_golden_book_signing_HRH_Prince_Philippe_of_Belgium.jpg','GoldenBookSigning',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_golden_book_signing_HRH_Prince_Philippe_of_Belgium.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_golden_book_signing_HRH_Prince_Philippe_of_Belgium.jpg','GoldenBookSigning',800,540);return false;" src="images/xsysys-articles/aboutus/news/full_golden_book_signing_HRH_Prince_Philippe_of_Belgium.jpg"/>
 											</a>
 											<a href="#">
-												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_golden_book_signing_HE_Mrs_fientje_Moerman.jpg','GoldenBookSigning', 800, 540);return false;" src="images/xsysys-articles/aboutus/news/full_golden_book_signing_HE_Mrs_fientje_Moerman.jpg">
+												<img onclick="MM_openBrWindow('images/xsysys-articles/aboutus/news/full_golden_book_signing_HE_Mrs_fientje_Moerman.jpg','GoldenBookSigning', 800, 540);return false;" src="images/xsysys-articles/aboutus/news/full_golden_book_signing_HE_Mrs_fientje_Moerman.jpg"/>
 											</a>
 										</div>
 									</div>
