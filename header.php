@@ -1,5 +1,5 @@
 		<header>
-			<h1 id="xsysys-logo" class="xsysys-logo"><a href="index.php"><img src="images/xsysys-asset/xsysys-logo.png"/></a></h1>
+			<h1 id="xsysys-logo" class="xsysys-logo"><a><img src="images/xsysys-asset/xsysys-logo.png"/></a></h1>
 			<script>
 				$(document).ready(function(){
 					$('.xsysys-logo img').on({
@@ -15,15 +15,15 @@
 					});
 				});
 			</script>
-			<div class="xsysys-top-nav">
+			<div class="xsysys-top-nav" id="xsysys-top-nav">
 				<ul>
 					<li>
-						<a id="home-nav" href="index.php">
+						<a id="home-nav">
 							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home
 						</a>
 					</li>
 					<li>
-						<a id="alliances-nav" href="#">
+						<a id="alliances-nav">
 							<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Alliances
 						</a>
 					</li>
@@ -40,73 +40,114 @@
 				<ul>
 					<li>
 						<img src="images/xsysys-ui/main-nav/xsysys_menu_icon.png"/>
-						<a id="aboutus" href="#">About Us</a>
+						<a id="aboutus">About Us</a>
 					</li>
 					<li>
 						<img src="images/xsysys-ui/main-nav/expertise_menu_icon.png"/>
-						<a id="expertise" href="#">Expertise</a>
+						<a id="expertise">Expertise</a>
 					</li>
 					<li>
 						<img src="images/xsysys-ui/main-nav/client_menu_icon.png"/>
-						<a id="clients" href="#">Clients</a>
+						<a id="clients">Clients</a>
 					</li>
 					<li>
 						<img src="images/xsysys-ui/main-nav/contact_menu_icon.png"/>
-						<a id="contactus" href="#">Contact Us</a>
+						<a id="contactus">Contact Us</a>
 					</li>
 					<li>
 						<img src="images/xsysys-ui/main-nav/careers_menu_icon.png"/>
-						<a id="careers" href="#">Careers</a>
+						<a id="careers">Careers</a>
 					</li>
 					<script>
 						$(document).ready(function(){
-							$('#xsysys-logo, #xsysys-top-nav').on('click', function(){
+							$('#xsysys-logo, #xsysys-top-nav > ul > li > a#home-nav').on('click', function(){
 								$('#page-navigator ul li').find('a').removeClass('active');
-								//$(this).addClass('active');
+								$(this).closest('li').siblings().find('a').removeClass('active');
+								$(this).addClass('active');
 								setTimeout(function() { 
-									//$('article #main-section').load('aboutus.php');	
-									window.location.href="index.php";
+									$('article #main-section').load('home-pages/index-main-content.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="index.php";
+								},500);
+							});
+							$('#xsysys-top-nav > ul > li > a#alliances-nav').on('click', function(){
+								$('#page-navigator ul li').find('a').removeClass('active');
+								$(this).closest('li').siblings().find('a').removeClass('active');
+								$(this).addClass('active');
+								setTimeout(function() { 
+									$('article #main-section').load('home-pages/alliances.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="index.php";
+								},500);
+							});
+							$('#xsysys-top-nav > ul > li > a#webmaster-nav').on('click', function(){
+								$('#page-navigator ul li').find('a').removeClass('active');
+								$(this).closest('li').siblings().find('a').removeClass('active');
+								$(this).addClass('active');
+								$('#footer-links ul li').find('#f-feedback').addClass('active');
+								setTimeout(function() { 
+									$('article #main-section').load('home-pages/webmaster.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="index.php";
 								},500);
 							});
 							$('#aboutus').on('click', function(){
 								$(this).closest('li').siblings('li').find('a').removeClass('active');
-								//$(this).addClass('active');
+								$(this).addClass('active');
 								setTimeout(function() { 
-									//$('article #main-section').load('aboutus.php');	
-									window.location.href="aboutus.php";
+									$('article #main-section').load('aboutus.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="aboutus.php";
 								},500);
 							});
 							$('#expertise').on('click', function(){
 								$(this).closest('li').siblings('li').find('a').removeClass('active');
-								//$(this).addClass('active');
+								$(this).addClass('active');
 								setTimeout(function() { 
-									//$('article #main-section').load('expertise.html');	
-									window.location.href="expertise.php";
+									$('article #main-section').load('home-pages/expertise.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="expertise.php";
 								},500);
 							});
 							$('#clients').on('click', function(){
 								$(this).closest('li').siblings('li').find('a').removeClass('active');
-								//$(this).addClass('active');
+								$(this).addClass('active');
 								setTimeout(function() { 
-									//$('article #main-section').load('clients.html');	
-									window.location.href="clients.php";
-									sessionStorage.clickcount = 0;
+									$('article #main-section').load('home-pages/clients.php',function(){$('#main-section').scrollTop(0)});
+									//$('#main-section').scrollTop($('#client_page_top').offset().top);
+									//window.location.href="clients.php";
 								},500);
 							});
 							$('#contactus').on('click', function(){
 								$(this).closest('li').siblings('li').find('a').removeClass('active');
-								//$(this).addClass('active');
+								$(this).addClass('active');
+								$('#footer-links ul li').find('#f-contactus').addClass('active');
 								setTimeout(function() { 
-									//$('article #main-section').load('contactus.html');	
-									window.location.href="contactus.php";
+									$('article #main-section').load('home-pages/contactus.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="contactus.php";
 								},500);
 							});
 							$('#careers').on('click', function(){
 								$(this).closest('li').siblings('li').find('a').removeClass('active');
-								//$(this).addClass('active');
+								$(this).addClass('active');
 								setTimeout(function() { 
-									//$('article #main-section').load('careers.html');	
-									window.location.href="careers.php";
+									$('article #main-section').load('home-pages/careers.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="careers.php";
+								},500);
+							});
+							$('#f-contactus').on('click', function(){
+								$(this).closest('li').siblings('li').find('a').removeClass('active');
+								$(this).addClass('active');
+								$('#page-navigator ul li').find('a').removeClass('active').find('#contactus').addClass('active');
+								$('#xsysys-top-nav ul li').find('a').removeClass('active');
+								setTimeout(function() { 
+									$('article #main-section').load('home-pages/contactus.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="f-contactus.php";
+								},500);
+							});
+							$('#f-feedback').on('click', function(){
+								$(this).closest('li').siblings('li').find('a').removeClass('active');
+								$(this).addClass('active');
+								$('#page-navigator ul li').find('a').removeClass('active');
+								$('#xsysys-top-nav ul li').find('a').removeClass('active').find('#webmaster-nav').addClass('active');
+								setTimeout(function() { 
+									$('article #main-section').load('home-pages/webmaster.php',function(){$('#main-section').scrollTop(0)});
+									//window.location.href="f-feedback.php";
 								},500);
 							});
 						});
