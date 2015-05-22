@@ -47,7 +47,44 @@
 		var w = $(window);
 		alert("(x,y): ("+(offset.left-w.scrollLeft())+","+(offset.top-w.scrollTop())+")");*/
 	</script>
+	
 	<script>
+	
+		/* functions defined for client page after loaded by ajax. functions are called from clients.php */
+		
+		function clientCaseStudyEventList(){
+			$('#clientsmainpagelist > ul > li> ul > li > a').on({
+				mouseout: function() {$(this).closest('li').attr({'style':'list-style-image:url(images/xsysys-ui/links/bullet1.png);color:#999999;'})},
+				mouseover: function(){$(this).closest('li').attr({'style':'list-style-image:url(images/xsysys-ui/links/bullet1_hover.png);color:#333333;'})},
+				click: function() {$(this).closest('li').addClass('active_event');}
+			});
+		}
+		
+		function clientTopPagePointer(){
+			$('.top_page_pointer').on('click', function(){
+				$(this).closest('.clients').parent('div').css('display','none');
+			});
+		}
+		
+		function showEvent(id) {
+			//alert(id);
+			$(id).closest('li').addClass('active_event');
+			$(id).closest('ul').parent('li').siblings().find('li').removeClass('active_event');
+			if($(id).attr('id') == "clients_main_page_id1") {
+				$('#client_main_page1').css({'display':'block'});
+				$('#client_main_page2').css({'display':'none'});
+				$('#clients_main_page_id2').closest('li').attr({'style':'list-style-image:url(images/xsysys-ui/links/bullet1.png)!important;color:#999999;'});
+				$('#clients_main_page_id1').closest('li').attr({'style':'list-style-image:url(images/xsysys-ui/links/bullet1_hover.png)!important;color:#999999;'});
+			}
+			else {
+				$('#client_main_page1').css({'display':'none'});
+				$('#client_main_page2').css({'display':'block'});
+				$('#clients_main_page_id1').closest('li').attr({'style':'list-style-image:url(images/xsysys-ui/links/bullet1.png)!important;color:#999999;'});
+				$('#clients_main_page_id2').closest('li').attr({'style':'list-style-image:url(images/xsysys-ui/links/bullet1_hover.png)!important!;color:#999999;'});
+			}
+		}
+		
+		/*triggerClient() function defined to check it when client links are clicked to direct the page to clients in home page [index-main.content.php]. */
 		function triggerClient(id){
 			if(id == "discoverClient1"){
 				if(typeof(Storage) !== "undefined") {
@@ -55,10 +92,31 @@
 						sessionStorage.clickcount = 1;
 					} 
 				}
-				window.location.href= "clients.php#casedtls_page_ref";
+				/*window.location.href= "clients.php#casedtls_page_ref";*/
+				
 				//document.getElementById("clients_main_page_id1")[0].onclick();
 				//$("#clients_main_page_id1").trigger("click");
 				//$("#clients_main_page_id1")[0].onclick();
+				var xmlhttp;
+				if(window.XMLHttpRequest){
+					xmlhttp= new XMLHttpRequest();
+				}
+				else{
+					xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+				}
+				xmlhttp.onreadystatechange=function(){
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById('main-section').innerHTML= xmlhttp.responseText;
+						$('#page-navigator ul li').find('#clients').addClass('active');
+						$('#clients_main_page_id1').trigger('click');
+						$('#main-section').scrollTop($('#casedtls_page_ref').offset().top - 83);
+						//$('#main-section').scrollTop();
+						clientCaseStudyEventList();
+						clientTopPagePointer();
+					}
+				}	
+				xmlhttp.open("GET", "home-pages/clients.php", true);
+				xmlhttp.send();
 			}
 			if(id == "discoverClient2"){
 				if(typeof(Storage) !== "undefined") {
@@ -66,24 +124,54 @@
 						sessionStorage.clickcount = 2;
 					} 
 				}
-				window.location.href= "clients.php#casedtls_page_ref";
+				/*window.location.href= "clients.php#casedtls_page_ref";*/
+				
 				//$("#clients_main_page_id2").trigger("click");
 				//$("#clients_main_page_id2")[0].onclick();
 				//document.getElementById("clients_main_page_id2")[0].onclick();
+				
+				var xmlhttp;
+				if(window.XMLHttpRequest){
+					xmlhttp= new XMLHttpRequest();
+				}
+				else{
+					xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+				}
+				xmlhttp.onreadystatechange=function(){
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById('main-section').innerHTML= xmlhttp.responseText;
+						$('#page-navigator ul li').find('#clients').addClass('active');
+						$('#clients_main_page_id2').trigger('click');
+						$('#main-section').scrollTop($('#casedtls_page_ref').offset().top - 83);
+						clientCaseStudyEventList();
+						clientTopPagePointer();
+					}
+				}	
+				xmlhttp.open("GET","home-pages/clients.php",true);
+				xmlhttp.send();
 			}
 		}
+		
+		/*clients click checked from home [index page] */
 		function checkTriggered(){
 			//alert(sessionStorage.clickcount);
 			if(sessionStorage.clickcount == 1){
 				$('#clients_main_page_id1').trigger('click');
+				//alert("tri-1");
 			}
 			else if(sessionStorage.clickcount == 2){
 				$('#clients_main_page_id2').trigger('click');
+				//alert("tri-2");
 			}
 			else {
 				sessionStorage.clickcount = 0;
 			}
 		}
+	</script>	
+	
+	<script>
+		/*script to toggle slide*/
+		
 		function toggleAside(id){
 			//alert(id);
 			var asideWidth= $('#'+id).closest('aside').css('width');
@@ -108,6 +196,7 @@
 				$('#'+id).removeClass('aside-btn-left').addClass('aside-btn-right');
 			}
 		}
+		
 		$(document).ready(function(){
 			$('#aside-toggle-btn-block > #aside-toggle-btn').on({
 				mouseover: function(){
@@ -144,6 +233,8 @@
 		});
 	</script>
 	<script>
+		/*Scripts to load Pages via Ajax*/
+		
 			function loadHistory(){
 					var xmlhttp;
 					if(window.XMLHttpRequest){
@@ -231,6 +322,7 @@
 					xmlhttp.open("GET","aboutus-pages/brand.php",true);
 					xmlhttp.send();
 			}
+			
 			function loadGateway(){
 					var xmlhttp;
 					if(window.XMLHttpRequest){
@@ -247,6 +339,7 @@
 					xmlhttp.open("GET","aboutus-pages/gateway.php",true);
 					xmlhttp.send();
 			}
+			
 			function loadNews(){
 					var xmlhttp;
 					if(window.XMLHttpRequest){
@@ -268,6 +361,7 @@
 					xmlhttp.open("GET","aboutus-pages/news.php",true);
 					xmlhttp.send();
 			}
+			
 			function loadQualitySystems(){
 					var xmlhttp;
 					if(window.XMLHttpRequest){
@@ -284,6 +378,7 @@
 					xmlhttp.open("GET","aboutus-pages/qsystems.php",true);
 					xmlhttp.send();
 			}
+			
 			function loadAboutUs(){
 					var xmlhttp;
 					if(window.XMLHttpRequest){
@@ -300,4 +395,112 @@
 					xmlhttp.open("GET","aboutus-pages/aboutus-main-content.php",true);
 					xmlhttp.send();
 			}
+			
+			function loadPublications(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('main-section').innerHTML= xmlhttp.responseText;
+						}
+					}	
+					xmlhttp.open("GET","home-pages/publications.php",true);
+					xmlhttp.send();
+			}
+			
+			function loadHome(){
+					var xmlhttp;
+					if(window.XMLHttpRequest){
+						xmlhttp= new XMLHttpRequest();
+					}
+					else{
+						xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById('main-section').innerHTML= xmlhttp.responseText;
+							$('#page-navigator ul li').find('a').removeClass('active');
+							/*To animate slider*/
+							var slider = new IdealImageSlider.Slider({
+								selector: '#slider',
+								height: 232, // Required but can be set by CSS
+								interval: 4000,
+							});
+							slider.start();
+							
+							/*To animate inspiring human endeavour*/
+							var xsysysSlogan= $('.xsysys-slogan');
+							arrayMe(xsysysSlogan);
+							animateInspire();
+						}
+					}	
+					xmlhttp.open("GET","home-pages/index-main-content.php",true);
+					xmlhttp.send();
+			}
+			
 	</script>
+	<script>
+		// function to load preas releses after ajax call
+		function openPressReleaseWin(id, bigurl, winName, width, height)
+		{
+			var thisID= $(id).attr('id');
+			if($('#'+thisID).css('cursor') == 'pointer')
+			{
+				var newWindow = window.open('', winName, 
+				"location=no, directories=no, fullscreen=no, " + 
+				"menubar=no, status=no, toolbar=no, width=" + 
+				width + ", height=" + height + ", scrollbars=yes");
+				if (newWindow)
+				{
+					newWindow.focus();
+				}
+				newWindow.document.writeln("<!doctype HTML>");
+				newWindow.document.writeln("<html>");
+				newWindow.document.writeln("<head>");
+				newWindow.document.writeln("<title>"+winName+"</title>");
+				newWindow.document.writeln('<script src="js/vendor/jquery/jquery-1.11.2.min.js"></scr'+'ipt>');
+				//newWindow.document.writeln('<script src="jQuery/newsscript.js"></scr'+'ipt>');
+				newWindow.document.writeln("</head>");
+				newWindow.document.writeln("<body onload='loadpublications()' style='margin: 0 0 0 0;'>");
+				newWindow.document.writeln("<a href='javascript:window.close();'>");
+				newWindow.document.writeln("<script>");
+				newWindow.document.writeln("function loadpublications() {");
+				newWindow.document.writeln("location.assign('"+bigurl+"');");
+				//newWindow.document.writeln("window.open('"+bigurl+"', '_self');");
+				newWindow.document.writeln("}");
+				newWindow.document.writeln("</scr"+"ipt>");
+				newWindow.document.writeln("</a>");
+				newWindow.document.writeln("</body></html>");
+				newWindow.document.close();
+				//newWindow.onbeforeunload = function() {
+					//return "Did you save your stuff?"
+				//} 
+				newWindow.onunload=function() {
+					$('#'+thisID).attr({'style':'cursor:pointer!important'});
+					$('#'+thisID).closest('li').addClass('active_event');
+				};
+				//newWindow.onfocus = function("in focus");
+				//newWindow.onblur = function("not in focus");
+				/*You then can set state with this method of window:*/
+			}
+		}
+	</script>
+	<script>
+		// function to switch between careers-section and job-desc-section after loading the page from ajax.
+		function showJobOpBlock(id) {
+			$('#'+id).closest('#careers-desc-section').css({'display':'none'});
+			$('#'+id).closest('#careers-desc-section').siblings('#careers-back-btn-to-home').css('display','none');
+			$('#'+id).closest('#careers-desc-section').siblings('#job-op-section').css({'display':'block'});
+		}
+		function showCareersBlock(id) {
+			$('#'+id).siblings('#job-op-section').css('display','none');
+			$('#'+id).siblings('#careers-back-btn-to-home').css('display','block');
+			$('#'+id).siblings('#careers-desc-section').css('display','block');
+		}
+	</script>
+	
