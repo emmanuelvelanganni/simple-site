@@ -1,13 +1,13 @@
-			<div class="links">
+			<div class="links" id="footer-links">
 				<ul>
 					<li>
-						<a>Feedback</a>
+						<a id="f-feedback">Feedback</a>
 					</li>
 					<li>
-						<a>Contact Us</a>
+						<a id="f-contactus">Contact Us</a>
 					</li>
 					<li>
-						<a>Help</a>
+						<a id="f-help">Help</a>
 					</li>
 				</ul>
 			</div>
